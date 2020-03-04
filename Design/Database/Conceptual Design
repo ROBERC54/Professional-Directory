@@ -1,0 +1,7 @@
+CorpAssociation	CorpID|KeyTermID|
+CorpDetails 	CorpID|CorpName|Address|City|State|PostalCode|Country|Phone|Homepage|
+File			FileID|CorpID|FileName|FileType|UploadDate|PubDate|
+Contact			CorpID|ContactName|ContactTitle|Phone|Email|AltInfo|
+Industry 		IndustryID|Industry|
+Product			ProductID|CorpID|IndustryID|ProductName|
+KeyTerm			KeyTermID|IndustryID|KeyTerm|
