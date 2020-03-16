@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.EntityFrameworkCore;
+
+namespace ProfessionalDirectory.Model
+{
+    class MyContext : DbContext
+    {
+        public DbSet<Blog> Blogs { get; set; }
+
+        #region Required
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Blog>()
+                .Property(b => b.Url)
+                .IsRequired();
+        }
+        #endregion
+    }
+
+    public class Blog
+    {
+        public int BlogId { get; set; }
+        public string Url { get; set; }
+    }
+}
