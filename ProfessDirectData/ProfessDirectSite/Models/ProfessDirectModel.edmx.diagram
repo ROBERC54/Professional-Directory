@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d303842ac4d8455f9ce29a744388d1e1" Name="Diagram1">
+        <EntityTypeShape EntityType="ProfessDirectDataModel.Contact" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfessDirectDataModel.CorpAssociation" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfessDirectDataModel.CorpDetail" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfessDirectDataModel.File" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfessDirectDataModel.Industry" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfessDirectDataModel.KeyTerm" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfessDirectDataModel.Product" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="ProfessDirectDataModel.FK_dbo_Files_dbo_Contact_ContactID" ManuallyRouted="false" />
+        <AssociationConnector Association="ProfessDirectDataModel.FK_dbo_Files_dbo_Industry_IndustryID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

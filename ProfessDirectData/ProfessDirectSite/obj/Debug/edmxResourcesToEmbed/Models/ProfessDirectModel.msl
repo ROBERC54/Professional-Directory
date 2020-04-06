@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProfessDirectDataModelStoreContainer" CdmEntityContainer="ProfessDirectDataEntities">
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="ProfessDirectDataModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EnrollmentDate" ColumnName="EnrollmentDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CorpAssociations">
+      <EntityTypeMapping TypeName="ProfessDirectDataModel.CorpAssociation">
+        <MappingFragment StoreEntitySet="CorpAssociation">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EnrollmentDate" ColumnName="EnrollmentDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CorpDetails">
+      <EntityTypeMapping TypeName="ProfessDirectDataModel.CorpDetail">
+        <MappingFragment StoreEntitySet="CorpDetails">
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Credits" ColumnName="Credits" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Files">
+      <EntityTypeMapping TypeName="ProfessDirectDataModel.File">
+        <MappingFragment StoreEntitySet="Files">
+          <ScalarProperty Name="EnrollmentID" ColumnName="EnrollmentID" />
+          <ScalarProperty Name="Ranking" ColumnName="Ranking" />
+          <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Industries">
+      <EntityTypeMapping TypeName="ProfessDirectDataModel.Industry">
+        <MappingFragment StoreEntitySet="Industry">
+          <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Credits" ColumnName="Credits" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KeyTerms">
+      <EntityTypeMapping TypeName="ProfessDirectDataModel.KeyTerm">
+        <MappingFragment StoreEntitySet="KeyTerm">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EnrollmentDate" ColumnName="EnrollmentDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="ProfessDirectDataModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EnrollmentDate" ColumnName="EnrollmentDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProfessDirectDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EnrollmentDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Files" Relationship="Self.FK_dbo_Files_dbo_Contact_ContactID" FromRole="Contact" ToRole="Files" />
+  </EntityType>
+  <EntityType Name="CorpAssociation">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EnrollmentDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CorpDetail">
+    <Key>
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="CourseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Credits" Type="Int32" />
+  </EntityType>
+  <EntityType Name="File">
+    <Key>
+      <PropertyRef Name="EnrollmentID" />
+    </Key>
+    <Property Name="EnrollmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ranking" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="IndustryID" Type="Int32" Nullable="false" />
+    <Property Name="ContactID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Contact" Relationship="Self.FK_dbo_Files_dbo_Contact_ContactID" FromRole="Files" ToRole="Contact" />
+    <NavigationProperty Name="Industry" Relationship="Self.FK_dbo_Files_dbo_Industry_IndustryID" FromRole="Files" ToRole="Industry" />
+  </EntityType>
+  <EntityType Name="Industry">
+    <Key>
+      <PropertyRef Name="IndustryID" />
+    </Key>
+    <Property Name="IndustryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Credits" Type="Int32" />
+    <NavigationProperty Name="Files" Relationship="Self.FK_dbo_Files_dbo_Industry_IndustryID" FromRole="Industry" ToRole="Files" />
+  </EntityType>
+  <EntityType Name="KeyTerm">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EnrollmentDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EnrollmentDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_dbo_Files_dbo_Contact_ContactID">
+    <End Role="Contact" Type="Self.Contact" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Files" Type="Self.File" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact">
+        <PropertyRef Name="ContactID" />
+      </Principal>
+      <Dependent Role="Files">
+        <PropertyRef Name="ContactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Files_dbo_Industry_IndustryID">
+    <End Role="Industry" Type="Self.Industry" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Files" Type="Self.File" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Industry">
+        <PropertyRef Name="IndustryID" />
+      </Principal>
+      <Dependent Role="Files">
+        <PropertyRef Name="IndustryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProfessDirectDataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Contacts" EntityType="Self.Contact" />
+    <EntitySet Name="CorpAssociations" EntityType="Self.CorpAssociation" />
+    <EntitySet Name="CorpDetails" EntityType="Self.CorpDetail" />
+    <EntitySet Name="Files" EntityType="Self.File" />
+    <EntitySet Name="Industries" EntityType="Self.Industry" />
+    <EntitySet Name="KeyTerms" EntityType="Self.KeyTerm" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <AssociationSet Name="FK_dbo_Files_dbo_Contact_ContactID" Association="Self.FK_dbo_Files_dbo_Contact_ContactID">
+      <End Role="Contact" EntitySet="Contacts" />
+      <End Role="Files" EntitySet="Files" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Files_dbo_Industry_IndustryID" Association="Self.FK_dbo_Files_dbo_Industry_IndustryID">
+      <End Role="Industry" EntitySet="Industries" />
+      <End Role="Files" EntitySet="Files" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

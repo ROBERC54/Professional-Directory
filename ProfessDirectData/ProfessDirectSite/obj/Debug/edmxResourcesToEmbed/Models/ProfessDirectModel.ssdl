@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProfessDirectDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EnrollmentDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CorpAssociation">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EnrollmentDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CorpDetails">
+    <Key>
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="CourseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Credits" Type="int" />
+  </EntityType>
+  <EntityType Name="Files">
+    <Key>
+      <PropertyRef Name="EnrollmentID" />
+    </Key>
+    <Property Name="EnrollmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ranking" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="IndustryID" Type="int" Nullable="false" />
+    <Property Name="ContactID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Industry">
+    <Key>
+      <PropertyRef Name="IndustryID" />
+    </Key>
+    <Property Name="IndustryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Credits" Type="int" />
+  </EntityType>
+  <EntityType Name="KeyTerm">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EnrollmentDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EnrollmentDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_dbo_Files_dbo_Contact_ContactID">
+    <End Role="Contact" Type="Self.Contact" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Files" Type="Self.Files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact">
+        <PropertyRef Name="ContactID" />
+      </Principal>
+      <Dependent Role="Files">
+        <PropertyRef Name="ContactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Files_dbo_Industry_IndustryID">
+    <End Role="Industry" Type="Self.Industry" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Files" Type="Self.Files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Industry">
+        <PropertyRef Name="IndustryID" />
+      </Principal>
+      <Dependent Role="Files">
+        <PropertyRef Name="IndustryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProfessDirectDataModelStoreContainer">
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CorpAssociation" EntityType="Self.CorpAssociation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CorpDetails" EntityType="Self.CorpDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Files" EntityType="Self.Files" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Industry" EntityType="Self.Industry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KeyTerm" EntityType="Self.KeyTerm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_Files_dbo_Contact_ContactID" Association="Self.FK_dbo_Files_dbo_Contact_ContactID">
+      <End Role="Contact" EntitySet="Contact" />
+      <End Role="Files" EntitySet="Files" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Files_dbo_Industry_IndustryID" Association="Self.FK_dbo_Files_dbo_Industry_IndustryID">
+      <End Role="Industry" EntitySet="Industry" />
+      <End Role="Files" EntitySet="Files" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

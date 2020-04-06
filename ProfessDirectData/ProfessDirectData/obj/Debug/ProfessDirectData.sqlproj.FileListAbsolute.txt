@@ -1,5 +1,10 @@
 C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\bin\Debug\ProfessDirectData.dacpac
 C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\bin\Debug\ProfessDirectData.dll
 C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\bin\Debug\ProfessDirectData.pdb
+C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\obj\Debug\ProfessDirectData.sqlprojAssemblyReference.cache
+C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\obj\Debug\Model.xml
+C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\obj\Debug\refactor.xml
+C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\obj\Debug\postdeploy.sql
+C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\obj\Debug\predeploy.sql
 C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\obj\Debug\ProfessDirectData.dll
 C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\obj\Debug\ProfessDirectData.pdb
