@@ -1151,11 +1151,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\trapa\\source\\repos\\Professional Directory\\Professional-Directory\\ProfessionalDirectory\\ProfessionalDirectory.csproj",
+      "projectUniqueName": "C:\\Users\\trapa\\source\\repos\\Professional-Directory\\ProfessionalDirectory\\ProfessionalDirectory.csproj",
       "projectName": "ProfessionalDirectory",
-      "projectPath": "C:\\Users\\trapa\\source\\repos\\Professional Directory\\Professional-Directory\\ProfessionalDirectory\\ProfessionalDirectory.csproj",
+      "projectPath": "C:\\Users\\trapa\\source\\repos\\Professional-Directory\\ProfessionalDirectory\\ProfessionalDirectory.csproj",
       "packagesPath": "C:\\Users\\trapa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\trapa\\source\\repos\\Professional Directory\\Professional-Directory\\ProfessionalDirectory\\obj\\",
+      "outputPath": "C:\\Users\\trapa\\source\\repos\\Professional-Directory\\ProfessionalDirectory\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
