@@ -1,0 +1,42 @@
+﻿@model ProfessDirectSite.Models.File
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>File</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ranking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ranking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Industry.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Industry.Title)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EnrollmentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
