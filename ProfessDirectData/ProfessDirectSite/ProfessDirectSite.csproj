@@ -236,6 +236,9 @@
     <Content Include="Views\Files\Details.cshtml" />
     <Content Include="Views\Files\Edit.cshtml" />
     <Content Include="Views\Files\Index.cshtml" />
+    <Content Include="Views\Home\Obligations.cshtml" />
+    <Content Include="Views\Home\ComeVisit.cshtml" />
+    <Content Include="Views\Home\Errata.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

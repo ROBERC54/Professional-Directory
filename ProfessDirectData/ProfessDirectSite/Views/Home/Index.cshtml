@@ -8,7 +8,11 @@
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 <div>
-    @Html.ActionLink("List of contacts", "Index", "Contacts")<br />
+    <p>
+        <a class="btn btn-primary btn-lg">Learn more
+            @Html.ActionLink("List of contacts", "Index", "Contacts")<br />
+        </a>
+    </p>
     @Html.ActionLink("List of files", "Index", "Files")
 </div>
 <div class="row">
