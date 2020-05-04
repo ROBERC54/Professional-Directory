@@ -1,6 +1,5 @@
 C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\bin\Debug\ProfessDirectData.dacpac
 C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\bin\Debug\ProfessDirectData.dll
 C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\bin\Debug\ProfessDirectData.pdb
-C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\obj\Debug\ProfessDirectData.sqlprojAssemblyReference.cache
 C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\obj\Debug\ProfessDirectData.dll
 C:\Users\trapa\source\repos\Professional-Directory\ProfessDirectData\ProfessDirectData\obj\Debug\ProfessDirectData.pdb

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ProfessDirectDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ProfessDirectDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Contact">
           <Key>
             <PropertyRef Name="ContactID" />
@@ -12,6 +12,7 @@
           <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Age" Type="int" Nullable="false" />
           <Property Name="EnrollmentDate" Type="datetime" />
         </EntityType>
         <EntityType Name="CorpAssociation">
@@ -111,8 +112,7 @@
             <End Role="Files" EntitySet="Files" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ProfessDirectDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -125,6 +125,7 @@
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="EnrollmentDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Files" Relationship="Self.FK_dbo_Files_dbo_Contact_ContactID" FromRole="Contact" ToRole="Files" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="CorpAssociation">
           <Key>
@@ -235,6 +236,7 @@
           <EntitySetMapping Name="Contacts">
             <EntityTypeMapping TypeName="ProfessDirectDataModel.Contact">
               <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="Age" ColumnName="Age" />
                 <ScalarProperty Name="ContactID" ColumnName="ContactID" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />

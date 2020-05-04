@@ -32,6 +32,13 @@ namespace ProfessDirectSite.Controllers
 
             return View();
         }
+        public ActionResult Contribute()
+        {
+            ViewBag.Message = "Want to lend a hand?";
+
+            return View();
+        }
+
         public ActionResult ComeVisit()
         {
             ViewBag.Message = "Let's get in touch";

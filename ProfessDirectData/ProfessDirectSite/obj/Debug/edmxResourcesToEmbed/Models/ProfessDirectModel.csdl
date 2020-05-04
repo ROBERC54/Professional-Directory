@@ -9,6 +9,7 @@
     <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="EnrollmentDate" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Files" Relationship="Self.FK_dbo_Files_dbo_Contact_ContactID" FromRole="Contact" ToRole="Files" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="CorpAssociation">
     <Key>

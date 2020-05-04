@@ -239,6 +239,7 @@
     <Content Include="Views\Home\Obligations.cshtml" />
     <Content Include="Views\Home\ComeVisit.cshtml" />
     <Content Include="Views\Home\Errata.cshtml" />
+    <Content Include="Views\Home\Contribute.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

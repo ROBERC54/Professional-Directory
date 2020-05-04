@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Contacts">
       <EntityTypeMapping TypeName="ProfessDirectDataModel.Contact">
         <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="Age" ColumnName="Age" />
           <ScalarProperty Name="ContactID" ColumnName="ContactID" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />

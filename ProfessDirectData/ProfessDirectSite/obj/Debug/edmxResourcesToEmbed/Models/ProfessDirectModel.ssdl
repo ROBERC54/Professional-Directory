@@ -7,6 +7,7 @@
     <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" />
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Age" Type="int" Nullable="false" />
     <Property Name="EnrollmentDate" Type="datetime" />
   </EntityType>
   <EntityType Name="CorpAssociation">

@@ -24,6 +24,7 @@ namespace ProfessDirectSite.Models
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public Nullable<System.DateTime> EnrollmentDate { get; set; }
+        public int Age { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<File> Files { get; set; }
